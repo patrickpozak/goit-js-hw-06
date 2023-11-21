@@ -12,8 +12,8 @@ function handleSubmit(e) {
     return alert("Please fill in all the fields!");
   }
   const formUser = {
-    email: email.value,
-    password: password.value,
+    email: this.email.value,
+    password: this.password.value,
   };
   console.log(formUser);
   registerForm.reset();

@@ -8,9 +8,11 @@ const numberInput = document.querySelector('input[type="number"]');
 const createBtn = document.querySelector("button[data-create]");
 const destroyBtn = document.querySelector("button[data-destroy]");
 const boxesDiv = document.querySelector("div#boxes");
-const boxSize = 30;
+let boxSize = 30;
 
-createBtn.addEventListener("click", createBoxes(Number(numberInput.value)));
+createBtn.addEventListener("click", () =>
+  createBoxes(Number(numberInput.value))
+);
 destroyBtn.addEventListener("click", destroyBoxes);
 
 function divGenerator() {
@@ -28,9 +30,7 @@ function createBoxes(amount) {
 }
 
 function destroyBoxes() {
-  const boxesDivContent = boxesDiv.children;
-
-  boxesDivContent.remove();
+  boxesDiv.remove();
 
   // FOR REMOVING SELECTED AMOUNT OF ELEMENTS
   // for (let i = 0; i < amount; i++) {
