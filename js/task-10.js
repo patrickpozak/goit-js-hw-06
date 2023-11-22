@@ -30,8 +30,8 @@ function createBoxes(amount) {
 }
 
 function destroyBoxes() {
-  boxesDiv.remove();
-
+  boxesDiv.innerHTML = "";
+  boxSize = 30;
   // FOR REMOVING SELECTED AMOUNT OF ELEMENTS
   // for (let i = 0; i < amount; i++) {
   //   if (typeof boxesDiv.lastChild != "undefined" && boxesDiv.lastChild != null) {
